@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ScanLAN.h"
+@import LANScanKit;
 
 @interface ViewController : UITableViewController <ScanLANDelegate>
 

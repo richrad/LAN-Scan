@@ -84,7 +84,7 @@
         NSLog(@"SUCCESS");
         NSString *deviceIPAddress = [[[[NSString stringWithFormat:@"%@%ld", self.baseAddress, (long)self.currentHostAddress] stringByReplacingOccurrencesOfString:@".0" withString:@"."] stringByReplacingOccurrencesOfString:@".00" withString:@"."] stringByReplacingOccurrencesOfString:@".." withString:@".0."];
         NSString *deviceName = [self getHostFromIPAddress:[[NSString stringWithFormat:@"%@%ld", self.baseAddress, (long)self.currentHostAddress] cStringUsingEncoding:NSASCIIStringEncoding]];
-        [self.delegate scanLANDidFindNewAdrress:deviceIPAddress havingHostName:deviceName];
+        [self.delegate scanLANDidFindNewAddress:deviceIPAddress havingHostName:deviceName];
     }
     else {
         NSLog(@"FAILURE");
@@ -120,7 +120,7 @@
             hostName = [NSString stringWithFormat:@"%s", hostname];
             break;
         }
-        freeaddrinfo(results);
+        //freeaddrinfo(results);
     }
     return hostName;
 }

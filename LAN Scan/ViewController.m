@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "Device.h"
+@import LANScanKit;
 
 @interface ViewController ()
 
@@ -65,7 +65,7 @@
 }
 
 #pragma mark LAN Scanner delegate method
-- (void)scanLANDidFindNewAdrress:(NSString *)address havingHostName:(NSString *)hostName {
+- (void)scanLANDidFindNewAddress:(NSString *)address havingHostName:(NSString *)hostName {
     NSLog(@"found  %@", address);
     Device *device = [[Device alloc] init];
     device.name = hostName;
