@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ScanLAN.h"
-@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, ScanLANDelegate>
+
+@interface ViewController : UITableViewController <ScanLANDelegate>
 
 @end
